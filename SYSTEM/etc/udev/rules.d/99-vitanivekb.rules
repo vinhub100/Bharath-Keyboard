@@ -1,0 +1,4 @@
+
+ACTION=="add" ATTR{product}=="Keyboard 2020" RUN+="/opt/VitaniveKB/scripts/udevRestartServiceD.sh"
+ACTION=="change" ATTR{product}=="Keyboard 2020" RUN+="/opt/VitaniveKB/scripts/udevRestartServiceD.sh" 
+

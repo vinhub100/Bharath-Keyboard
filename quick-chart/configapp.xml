@@ -1,0 +1,8 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+        "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node name="/in/kanet/kbconfig/config">
+        <interface name="in.kanet.kbconfig.Config">
+                <method name="reloadconf"/>
+<!--                <signal name="crashed"/>-->
+        </interface>
+</node>

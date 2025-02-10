@@ -1,0 +1,2645 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"48 device_keyboard.c
+[; ;device_keyboard.c: 48: const struct{uint8_t report[63];}hid_rpt01={
+[s S692 `uc -> 63 `i ]
+[n S692 . report ]
+"243
+[; ;device_keyboard.c: 243: {
+[s S700 `*v 1 `*v 1 ]
+[n S700 . lastINTransmission lastOUTTransmission ]
+"114
+[; ;device_keyboard.c: 114:         {
+[s S695 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S695 . leftControl leftShift leftAlt leftGUI rightControl rightShift rightAlt rightGUI ]
+"111
+[; ;device_keyboard.c: 111:     {
+[u S694 `uc 1 `S695 1 ]
+[n S694 . value bits ]
+"93
+[; ;device_keyboard.c: 93: {
+[s S693 `S694 1 :8 `uc 1 `uc -> 6 `i ]
+[n S693 . modifiers . keys ]
+"185
+[; ;device_keyboard.c: 185: {
+[s S696 `uc -> 8 `i ]
+[n S696 . data ]
+"190
+[; ;device_keyboard.c: 190: {
+[s S697 `uc -> 8 `i ]
+[n S697 . data ]
+"203
+[; ;device_keyboard.c: 203:     {
+[s S699 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S699 . numLock capsLock scrollLock compose kana . ]
+"199
+[; ;device_keyboard.c: 199: {
+[u S698 `uc 1 `S699 1 ]
+[n S698 . value leds ]
+"289
+[; ;device_keyboard.c: 289: extern volatile signed int SOFCounter;
+[v _SOFCounter `Vi ~T0 @X0 0 e ]
+"355 ./usb/usb_device.h
+[; ;./usb/usb_device.h: 355: void USBEnableEndpoint(uint8_t ep, uint8_t options);
+[v _USBEnableEndpoint `(v ~T0 @X0 0 ef2`uc`uc ]
+"448
+[; ;./usb/usb_device.h: 448: void* USBTransferOnePacket(uint8_t ep,uint8_t dir,uint8_t* data,uint8_t len);
+[v _USBTransferOnePacket `(*v ~T0 @X0 0 ef4`uc`uc`*uc`uc ]
+"350 device_keyboard.c
+[; ;device_keyboard.c: 350: typedef struct keyStruct {
+[s S705 `uc 1 `uc 1 `uc 1 ]
+[n S705 keyStruct keyCode modifier type ]
+[v F5002 `(v ~T0 @X0 1 tf1`ul ]
+"183 /opt/microchip/xc8/v2.05/pic/include/pic18.h
+[v __delay `JF5002 ~T0 @X0 0 e ]
+[p i __delay ]
+"2901 /opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2901: extern volatile unsigned char PORTA __attribute__((address(0xF80)));
+[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
+"4105
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4105: extern volatile unsigned char LATD __attribute__((address(0xF8C)));
+[v _LATD `Vuc ~T0 @X0 0 e@3980 ]
+"3891
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3891: extern volatile unsigned char LATB __attribute__((address(0xF8A)));
+[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
+"4003
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4003: extern volatile unsigned char LATC __attribute__((address(0xF8B)));
+[v _LATC `Vuc ~T0 @X0 0 e@3979 ]
+"507 device_keyboard.c
+[; ;device_keyboard.c: 507:     if( USBDeviceState < CONFIGURED_STATE )
+[c E5302 0 1 2 4 8 16 32 .. ]
+[n E5302 . DETACHED_STATE ATTACHED_STATE POWERED_STATE DEFAULT_STATE ADR_PENDING_STATE ADDRESS_STATE CONFIGURED_STATE  ]
+"2050 ./usb/usb_device.h
+[; ;./usb/usb_device.h: 2050: extern volatile USB_DEVICE_STATE USBDeviceState;
+[v _USBDeviceState `VE5302 ~T0 @X0 0 e ]
+"461 /opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 461:     struct {
+[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S27 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
+"460
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 460: typedef union {
+[u S26 `S27 1 ]
+[n S26 . . ]
+"471
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 471: extern volatile UCONbits_t UCONbits __attribute__((address(0xF60)));
+[v _UCONbits `VS26 ~T0 @X0 0 e@3936 ]
+"29 /opt/microchip/xc8/v2.05/pic/include/c99/string.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/c99/string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"285 device_keyboard.c
+[; ;device_keyboard.c: 285: static void KeyboardProcessOutputReport(void);
+[v _KeyboardProcessOutputReport `(v ~T0 @X0 0 sf ]
+"704
+[; ;device_keyboard.c: 704:         LED_On(LED_E1);
+[c E5018 0 1 2 3 .. ]
+[n E5018 . LED_NONE LED_E1 LED_E2 LED_E3  ]
+"58 ./leds.h
+[; ;./leds.h: 58: void LED_On(LED led);
+[v _LED_On `(v ~T0 @X0 0 ef1`E5018 ]
+"76
+[; ;./leds.h: 76: void LED_Off(LED led);
+[v _LED_Off `(v ~T0 @X0 0 ef1`E5018 ]
+"305 ./usb/usb_device_hid.h
+[; ;./usb/usb_device_hid.h: 305: extern volatile uint8_t CtrlTrfData[8];
+[v _CtrlTrfData `Vuc ~T0 @X0 -> 0 `x e ]
+"2028 ./usb/usb_device.h
+[; ;./usb/usb_device.h: 2028:     {
+[u S676 `*uc 1 `*us 1 ]
+[n S676 . bRam wRam ]
+"2037
+[; ;./usb/usb_device.h: 2037:         {
+[s S678 :7 `uc 1 :1 `uc 1 ]
+[n S678 . reserved busy ]
+"2035
+[; ;./usb/usb_device.h: 2035:     {
+[u S677 `S678 1 `uc 1 ]
+[n S677 . bits Val ]
+"1985
+[; ;./usb/usb_device.h: 1985:     {
+[s S670 `uc 1 `uc 1 ]
+[n S670 . LB HB ]
+"1981
+[; ;./usb/usb_device.h: 1981: {
+[u S669 `us 1 `uc -> 2 `i `S670 1 ]
+[n S669 . Val v byte ]
+[v F5431 `(v ~T0 @X0 0 tf ]
+"2026
+[; ;./usb/usb_device.h: 2026: {
+[s S675 `S676 1 `S677 1 `S669 1 `*F5431 1 ]
+[n S675 . pDst info wCount pFunc ]
+"610 ./usb/usb_hal_pic18.h
+[; ;./usb/usb_hal_pic18.h: 610:     extern volatile OUT_PIPE outPipes[1];
+[v _outPipes `VS675 ~T0 @X0 -> 0 `x e ]
+"54 /opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 54: __asm("SRCON1 equ 0F57h");
+[; <" SRCON1 equ 0F57h ;# ">
+"116
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 116: __asm("SRCON0 equ 0F58h");
+[; <" SRCON0 equ 0F58h ;# ">
+"187
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 187: __asm("CCPTMRS equ 0F59h");
+[; <" CCPTMRS equ 0F59h ;# ">
+"214
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 214: __asm("VREGCON equ 0F5Ah");
+[; <" VREGCON equ 0F5Ah ;# ">
+"234
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 234: __asm("ANSELA equ 0F5Bh");
+[; <" ANSELA equ 0F5Bh ;# ">
+"279
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 279: __asm("ANSELB equ 0F5Ch");
+[; <" ANSELB equ 0F5Ch ;# ">
+"329
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 329: __asm("ANSELC equ 0F5Dh");
+[; <" ANSELC equ 0F5Dh ;# ">
+"363
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 363: __asm("ANSELD equ 0F5Eh");
+[; <" ANSELD equ 0F5Eh ;# ">
+"425
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 425: __asm("ANSELE equ 0F5Fh");
+[; <" ANSELE equ 0F5Fh ;# ">
+"457
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 457: __asm("UCON equ 0F60h");
+[; <" UCON equ 0F60h ;# ">
+"508
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 508: __asm("USTAT equ 0F61h");
+[; <" USTAT equ 0F61h ;# ">
+"568
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 568: __asm("UCFG equ 0F62h");
+[; <" UCFG equ 0F62h ;# ">
+"647
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 647: __asm("UADDR equ 0F63h");
+[; <" UADDR equ 0F63h ;# ">
+"711
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 711: __asm("UIE equ 0F64h");
+[; <" UIE equ 0F64h ;# ">
+"767
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 767: __asm("UIR equ 0F65h");
+[; <" UIR equ 0F65h ;# ">
+"823
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 823: __asm("UEIE equ 0F66h");
+[; <" UEIE equ 0F66h ;# ">
+"874
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 874: __asm("UEIR equ 0F67h");
+[; <" UEIR equ 0F67h ;# ">
+"925
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 925: __asm("UFRM equ 0F68h");
+[; <" UFRM equ 0F68h ;# ">
+"932
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 932: __asm("UFRML equ 0F68h");
+[; <" UFRML equ 0F68h ;# ">
+"1010
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1010: __asm("UFRMH equ 0F69h");
+[; <" UFRMH equ 0F69h ;# ">
+"1050
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1050: __asm("UEP0 equ 0F6Ah");
+[; <" UEP0 equ 0F6Ah ;# ">
+"1158
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1158: __asm("UEP1 equ 0F6Bh");
+[; <" UEP1 equ 0F6Bh ;# ">
+"1266
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1266: __asm("UEP2 equ 0F6Ch");
+[; <" UEP2 equ 0F6Ch ;# ">
+"1374
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1374: __asm("UEP3 equ 0F6Dh");
+[; <" UEP3 equ 0F6Dh ;# ">
+"1482
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1482: __asm("UEP4 equ 0F6Eh");
+[; <" UEP4 equ 0F6Eh ;# ">
+"1590
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1590: __asm("UEP5 equ 0F6Fh");
+[; <" UEP5 equ 0F6Fh ;# ">
+"1698
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1698: __asm("UEP6 equ 0F70h");
+[; <" UEP6 equ 0F70h ;# ">
+"1806
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1806: __asm("UEP7 equ 0F71h");
+[; <" UEP7 equ 0F71h ;# ">
+"1914
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1914: __asm("UEP8 equ 0F72h");
+[; <" UEP8 equ 0F72h ;# ">
+"1990
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 1990: __asm("UEP9 equ 0F73h");
+[; <" UEP9 equ 0F73h ;# ">
+"2066
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2066: __asm("UEP10 equ 0F74h");
+[; <" UEP10 equ 0F74h ;# ">
+"2142
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2142: __asm("UEP11 equ 0F75h");
+[; <" UEP11 equ 0F75h ;# ">
+"2218
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2218: __asm("UEP12 equ 0F76h");
+[; <" UEP12 equ 0F76h ;# ">
+"2294
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2294: __asm("UEP13 equ 0F77h");
+[; <" UEP13 equ 0F77h ;# ">
+"2370
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2370: __asm("UEP14 equ 0F78h");
+[; <" UEP14 equ 0F78h ;# ">
+"2446
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2446: __asm("UEP15 equ 0F79h");
+[; <" UEP15 equ 0F79h ;# ">
+"2522
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2522: __asm("SLRCON equ 0F7Ah");
+[; <" SLRCON equ 0F7Ah ;# ">
+"2566
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2566: __asm("VREFCON2 equ 0F7Bh");
+[; <" VREFCON2 equ 0F7Bh ;# ">
+"2618
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2618: __asm("VREFCON1 equ 0F7Ch");
+[; <" VREFCON1 equ 0F7Ch ;# ">
+"2679
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2679: __asm("VREFCON0 equ 0F7Dh");
+[; <" VREFCON0 equ 0F7Dh ;# ">
+"2739
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2739: __asm("PMD0 equ 0F7Eh");
+[; <" PMD0 equ 0F7Eh ;# ">
+"2821
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2821: __asm("PMD1 equ 0F7Fh");
+[; <" PMD1 equ 0F7Fh ;# ">
+"2903
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 2903: __asm("PORTA equ 0F80h");
+[; <" PORTA equ 0F80h ;# ">
+"3055
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3055: __asm("PORTB equ 0F81h");
+[; <" PORTB equ 0F81h ;# ">
+"3165
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3165: __asm("PORTC equ 0F82h");
+[; <" PORTC equ 0F82h ;# ">
+"3307
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3307: __asm("PORTD equ 0F83h");
+[; <" PORTD equ 0F83h ;# ">
+"3428
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3428: __asm("PORTE equ 0F84h");
+[; <" PORTE equ 0F84h ;# ">
+"3547
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3547: __asm("WPUB equ 0F85h");
+[; <" WPUB equ 0F85h ;# ">
+"3609
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3609: __asm("IOCB equ 0F86h");
+[; <" IOCB equ 0F86h ;# ">
+"3648
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3648: __asm("IOCC equ 0F87h");
+[; <" IOCC equ 0F87h ;# ">
+"3705
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3705: __asm("CTMUICON equ 0F88h");
+[; <" CTMUICON equ 0F88h ;# ">
+"3781
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3781: __asm("LATA equ 0F89h");
+[; <" LATA equ 0F89h ;# ">
+"3893
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 3893: __asm("LATB equ 0F8Ah");
+[; <" LATB equ 0F8Ah ;# ">
+"4005
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4005: __asm("LATC equ 0F8Bh");
+[; <" LATC equ 0F8Bh ;# ">
+"4107
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4107: __asm("LATD equ 0F8Ch");
+[; <" LATD equ 0F8Ch ;# ">
+"4219
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4219: __asm("LATE equ 0F8Dh");
+[; <" LATE equ 0F8Dh ;# ">
+"4271
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4271: __asm("CTMUCONL equ 0F8Eh");
+[; <" CTMUCONL equ 0F8Eh ;# ">
+"4276
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4276: __asm("CTMUCON1 equ 0F8Eh");
+[; <" CTMUCON1 equ 0F8Eh ;# ">
+"4425
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4425: __asm("CTMUCONH equ 0F8Fh");
+[; <" CTMUCONH equ 0F8Fh ;# ">
+"4430
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4430: __asm("CTMUCON0 equ 0F8Fh");
+[; <" CTMUCON0 equ 0F8Fh ;# ">
+"4581
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4581: __asm("CCPR2 equ 0F90h");
+[; <" CCPR2 equ 0F90h ;# ">
+"4588
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4588: __asm("CCPR2L equ 0F90h");
+[; <" CCPR2L equ 0F90h ;# ">
+"4608
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4608: __asm("CCPR2H equ 0F91h");
+[; <" CCPR2H equ 0F91h ;# ">
+"4628
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4628: __asm("TRISA equ 0F92h");
+[; <" TRISA equ 0F92h ;# ">
+"4633
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4633: __asm("DDRA equ 0F92h");
+[; <" DDRA equ 0F92h ;# ">
+"4850
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4850: __asm("TRISB equ 0F93h");
+[; <" TRISB equ 0F93h ;# ">
+"4855
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 4855: __asm("DDRB equ 0F93h");
+[; <" DDRB equ 0F93h ;# ">
+"5072
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5072: __asm("TRISC equ 0F94h");
+[; <" TRISC equ 0F94h ;# ">
+"5077
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5077: __asm("DDRC equ 0F94h");
+[; <" DDRC equ 0F94h ;# ">
+"5250
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5250: __asm("TRISD equ 0F95h");
+[; <" TRISD equ 0F95h ;# ">
+"5255
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5255: __asm("DDRD equ 0F95h");
+[; <" DDRD equ 0F95h ;# ">
+"5472
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5472: __asm("TRISE equ 0F96h");
+[; <" TRISE equ 0F96h ;# ">
+"5477
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5477: __asm("DDRE equ 0F96h");
+[; <" DDRE equ 0F96h ;# ">
+"5588
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5588: __asm("CCP2CON equ 0F97h");
+[; <" CCP2CON equ 0F97h ;# ">
+"5593
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5593: __asm("ECCP2CON equ 0F97h");
+[; <" ECCP2CON equ 0F97h ;# ">
+"5744
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5744: __asm("CM1CON0 equ 0F98h");
+[; <" CM1CON0 equ 0F98h ;# ">
+"5867
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5867: __asm("CM2CON0 equ 0F99h");
+[; <" CM2CON0 equ 0F99h ;# ">
+"5990
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 5990: __asm("CM2CON1 equ 0F9Ah");
+[; <" CM2CON1 equ 0F9Ah ;# ">
+"6052
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6052: __asm("OSCTUNE equ 0F9Bh");
+[; <" OSCTUNE equ 0F9Bh ;# ">
+"6122
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6122: __asm("HLVDCON equ 0F9Ch");
+[; <" HLVDCON equ 0F9Ch ;# ">
+"6192
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6192: __asm("PIE1 equ 0F9Dh");
+[; <" PIE1 equ 0F9Dh ;# ">
+"6291
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6291: __asm("PIR1 equ 0F9Eh");
+[; <" PIR1 equ 0F9Eh ;# ">
+"6390
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6390: __asm("IPR1 equ 0F9Fh");
+[; <" IPR1 equ 0F9Fh ;# ">
+"6489
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6489: __asm("PIE2 equ 0FA0h");
+[; <" PIE2 equ 0FA0h ;# ">
+"6588
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6588: __asm("PIR2 equ 0FA1h");
+[; <" PIR2 equ 0FA1h ;# ">
+"6687
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6687: __asm("IPR2 equ 0FA2h");
+[; <" IPR2 equ 0FA2h ;# ">
+"6786
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6786: __asm("PIE3 equ 0FA3h");
+[; <" PIE3 equ 0FA3h ;# ">
+"6859
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6859: __asm("PIR3 equ 0FA4h");
+[; <" PIR3 equ 0FA4h ;# ">
+"6906
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6906: __asm("IPR3 equ 0FA5h");
+[; <" IPR3 equ 0FA5h ;# ">
+"6953
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 6953: __asm("EECON1 equ 0FA6h");
+[; <" EECON1 equ 0FA6h ;# ">
+"7019
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7019: __asm("EECON2 equ 0FA7h");
+[; <" EECON2 equ 0FA7h ;# ">
+"7039
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7039: __asm("EEDATA equ 0FA8h");
+[; <" EEDATA equ 0FA8h ;# ">
+"7046
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7046: __asm("EEADR equ 0FA9h");
+[; <" EEADR equ 0FA9h ;# ">
+"7053
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7053: __asm("RCSTA1 equ 0FABh");
+[; <" RCSTA1 equ 0FABh ;# ">
+"7058
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7058: __asm("RCSTA equ 0FABh");
+[; <" RCSTA equ 0FABh ;# ">
+"7259
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7259: __asm("TXSTA1 equ 0FACh");
+[; <" TXSTA1 equ 0FACh ;# ">
+"7264
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7264: __asm("TXSTA equ 0FACh");
+[; <" TXSTA equ 0FACh ;# ">
+"7553
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7553: __asm("TXREG1 equ 0FADh");
+[; <" TXREG1 equ 0FADh ;# ">
+"7558
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7558: __asm("TXREG equ 0FADh");
+[; <" TXREG equ 0FADh ;# ">
+"7591
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7591: __asm("RCREG1 equ 0FAEh");
+[; <" RCREG1 equ 0FAEh ;# ">
+"7596
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7596: __asm("RCREG equ 0FAEh");
+[; <" RCREG equ 0FAEh ;# ">
+"7629
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7629: __asm("SPBRG1 equ 0FAFh");
+[; <" SPBRG1 equ 0FAFh ;# ">
+"7634
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7634: __asm("SPBRG equ 0FAFh");
+[; <" SPBRG equ 0FAFh ;# ">
+"7767
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7767: __asm("SPBRGH1 equ 0FB0h");
+[; <" SPBRGH1 equ 0FB0h ;# ">
+"7772
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7772: __asm("SPBRGH equ 0FB0h");
+[; <" SPBRGH equ 0FB0h ;# ">
+"7905
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 7905: __asm("T3CON equ 0FB1h");
+[; <" T3CON equ 0FB1h ;# ">
+"8034
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8034: __asm("TMR3 equ 0FB2h");
+[; <" TMR3 equ 0FB2h ;# ">
+"8041
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8041: __asm("TMR3L equ 0FB2h");
+[; <" TMR3L equ 0FB2h ;# ">
+"8061
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8061: __asm("TMR3H equ 0FB3h");
+[; <" TMR3H equ 0FB3h ;# ">
+"8081
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8081: __asm("T3GCON equ 0FB4h");
+[; <" T3GCON equ 0FB4h ;# ">
+"8212
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8212: __asm("ACTCON equ 0FB5h");
+[; <" ACTCON equ 0FB5h ;# ">
+"8217
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8217: __asm("STCON equ 0FB5h");
+[; <" STCON equ 0FB5h ;# ">
+"8418
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8418: __asm("ECCP1AS equ 0FB6h");
+[; <" ECCP1AS equ 0FB6h ;# ">
+"8552
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8552: __asm("PWM1CON equ 0FB7h");
+[; <" PWM1CON equ 0FB7h ;# ">
+"8557
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8557: __asm("ECCP1DEL equ 0FB7h");
+[; <" ECCP1DEL equ 0FB7h ;# ">
+"8702
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8702: __asm("BAUDCON1 equ 0FB8h");
+[; <" BAUDCON1 equ 0FB8h ;# ">
+"8707
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8707: __asm("BAUDCON equ 0FB8h");
+[; <" BAUDCON equ 0FB8h ;# ">
+"8711
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 8711: __asm("BAUDCTL equ 0FB8h");
+[; <" BAUDCTL equ 0FB8h ;# ">
+"9212
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9212: __asm("PSTR1CON equ 0FB9h");
+[; <" PSTR1CON equ 0FB9h ;# ">
+"9288
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9288: __asm("T2CON equ 0FBAh");
+[; <" T2CON equ 0FBAh ;# ">
+"9359
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9359: __asm("PR2 equ 0FBBh");
+[; <" PR2 equ 0FBBh ;# ">
+"9379
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9379: __asm("TMR2 equ 0FBCh");
+[; <" TMR2 equ 0FBCh ;# ">
+"9399
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9399: __asm("CCP1CON equ 0FBDh");
+[; <" CCP1CON equ 0FBDh ;# ">
+"9404
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9404: __asm("ECCP1CON equ 0FBDh");
+[; <" ECCP1CON equ 0FBDh ;# ">
+"9591
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9591: __asm("CCPR1 equ 0FBEh");
+[; <" CCPR1 equ 0FBEh ;# ">
+"9598
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9598: __asm("CCPR1L equ 0FBEh");
+[; <" CCPR1L equ 0FBEh ;# ">
+"9618
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9618: __asm("CCPR1H equ 0FBFh");
+[; <" CCPR1H equ 0FBFh ;# ">
+"9638
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9638: __asm("ADCON2 equ 0FC0h");
+[; <" ADCON2 equ 0FC0h ;# ">
+"9709
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9709: __asm("ADCON1 equ 0FC1h");
+[; <" ADCON1 equ 0FC1h ;# ">
+"9777
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9777: __asm("ADCON0 equ 0FC2h");
+[; <" ADCON0 equ 0FC2h ;# ">
+"9872
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9872: __asm("ADRESL equ 0FC3h");
+[; <" ADRESL equ 0FC3h ;# ">
+"9879
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9879: __asm("ADRESH equ 0FC4h");
+[; <" ADRESH equ 0FC4h ;# ">
+"9886
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9886: __asm("SSP1CON2 equ 0FC5h");
+[; <" SSP1CON2 equ 0FC5h ;# ">
+"9891
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 9891: __asm("SSPCON2 equ 0FC5h");
+[; <" SSPCON2 equ 0FC5h ;# ">
+"10240
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 10240: __asm("SSP1CON1 equ 0FC6h");
+[; <" SSP1CON1 equ 0FC6h ;# ">
+"10245
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 10245: __asm("SSPCON equ 0FC6h");
+[; <" SSPCON equ 0FC6h ;# ">
+"10249
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 10249: __asm("SSPCON1 equ 0FC6h");
+[; <" SSPCON1 equ 0FC6h ;# ">
+"10594
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 10594: __asm("SSP1STAT equ 0FC7h");
+[; <" SSP1STAT equ 0FC7h ;# ">
+"10599
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 10599: __asm("SSPSTAT equ 0FC7h");
+[; <" SSPSTAT equ 0FC7h ;# ">
+"11192
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11192: __asm("SSP1ADD equ 0FC8h");
+[; <" SSP1ADD equ 0FC8h ;# ">
+"11197
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11197: __asm("SSPADD equ 0FC8h");
+[; <" SSPADD equ 0FC8h ;# ">
+"11530
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11530: __asm("SSP1BUF equ 0FC9h");
+[; <" SSP1BUF equ 0FC9h ;# ">
+"11535
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11535: __asm("SSPBUF equ 0FC9h");
+[; <" SSPBUF equ 0FC9h ;# ">
+"11568
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11568: __asm("SSP1MSK equ 0FCAh");
+[; <" SSP1MSK equ 0FCAh ;# ">
+"11573
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11573: __asm("SSPMSK equ 0FCAh");
+[; <" SSPMSK equ 0FCAh ;# ">
+"11706
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11706: __asm("SSP1CON3 equ 0FCBh");
+[; <" SSP1CON3 equ 0FCBh ;# ">
+"11711
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11711: __asm("SSPCON3 equ 0FCBh");
+[; <" SSPCON3 equ 0FCBh ;# ">
+"11828
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11828: __asm("T1GCON equ 0FCCh");
+[; <" T1GCON equ 0FCCh ;# ">
+"11959
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 11959: __asm("T1CON equ 0FCDh");
+[; <" T1CON equ 0FCDh ;# ">
+"12088
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12088: __asm("TMR1 equ 0FCEh");
+[; <" TMR1 equ 0FCEh ;# ">
+"12095
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12095: __asm("TMR1L equ 0FCEh");
+[; <" TMR1L equ 0FCEh ;# ">
+"12115
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12115: __asm("TMR1H equ 0FCFh");
+[; <" TMR1H equ 0FCFh ;# ">
+"12135
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12135: __asm("RCON equ 0FD0h");
+[; <" RCON equ 0FD0h ;# ">
+"12268
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12268: __asm("WDTCON equ 0FD1h");
+[; <" WDTCON equ 0FD1h ;# ">
+"12296
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12296: __asm("OSCCON2 equ 0FD2h");
+[; <" OSCCON2 equ 0FD2h ;# ">
+"12358
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12358: __asm("OSCCON equ 0FD3h");
+[; <" OSCCON equ 0FD3h ;# ">
+"12441
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12441: __asm("T0CON equ 0FD5h");
+[; <" T0CON equ 0FD5h ;# ">
+"12511
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12511: __asm("TMR0 equ 0FD6h");
+[; <" TMR0 equ 0FD6h ;# ">
+"12518
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12518: __asm("TMR0L equ 0FD6h");
+[; <" TMR0L equ 0FD6h ;# ">
+"12538
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12538: __asm("TMR0H equ 0FD7h");
+[; <" TMR0H equ 0FD7h ;# ">
+"12558
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12558: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"12629
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12629: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"12636
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12636: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"12656
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12656: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"12663
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12663: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"12683
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12683: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"12703
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12703: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"12723
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12723: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"12743
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12743: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"12763
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12763: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"12770
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12770: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"12777
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12777: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"12797
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12797: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"12804
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12804: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"12824
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12824: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"12844
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12844: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"12864
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12864: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"12884
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12884: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"12904
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12904: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"12924
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12924: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"12931
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12931: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"12951
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12951: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"12958
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12958: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"12978
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12978: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"12998
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 12998: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"13018
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13018: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"13038
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13038: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"13058
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13058: __asm("INTCON3 equ 0FF0h");
+[; <" INTCON3 equ 0FF0h ;# ">
+"13150
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13150: __asm("INTCON2 equ 0FF1h");
+[; <" INTCON2 equ 0FF1h ;# ">
+"13227
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13227: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"13344
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13344: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"13351
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13351: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"13371
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13371: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"13391
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13391: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"13413
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13413: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"13420
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13420: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"13440
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13440: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"13460
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13460: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"13469
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13469: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"13476
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13476: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"13483
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13483: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"13503
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13503: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"13523
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13523: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"13530
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13530: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"13604
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13604: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"13611
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13611: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"13631
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13631: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"13651
+[; ;/opt/microchip/xc8/v2.05/pic/include/pic18f45k50.h: 13651: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"48 device_keyboard.c
+[; ;device_keyboard.c: 48: const struct{uint8_t report[63];}hid_rpt01={
+[v _hid_rpt01 `CS692 ~T0 @X0 1 e ]
+[i _hid_rpt01
+:U ..
+:U ..
+:U ..
+-> -> 5 `i `uc
+-> -> 1 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 161 `i `uc
+-> -> 1 `i `uc
+-> -> 5 `i `uc
+-> -> 7 `i `uc
+-> -> 25 `i `uc
+-> -> 224 `i `uc
+-> -> 41 `i `uc
+-> -> 231 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 1 `i `uc
+-> -> 149 `i `uc
+-> -> 8 `i `uc
+-> -> 129 `i `uc
+-> -> 2 `i `uc
+-> -> 149 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+-> -> 129 `i `uc
+-> -> 3 `i `uc
+-> -> 149 `i `uc
+-> -> 5 `i `uc
+-> -> 117 `i `uc
+-> -> 1 `i `uc
+-> -> 5 `i `uc
+-> -> 8 `i `uc
+-> -> 25 `i `uc
+-> -> 1 `i `uc
+-> -> 41 `i `uc
+-> -> 5 `i `uc
+-> -> 145 `i `uc
+-> -> 2 `i `uc
+-> -> 149 `i `uc
+-> -> 1 `i `uc
+-> -> 117 `i `uc
+-> -> 3 `i `uc
+-> -> 145 `i `uc
+-> -> 3 `i `uc
+-> -> 149 `i `uc
+-> -> 6 `i `uc
+-> -> 117 `i `uc
+-> -> 8 `i `uc
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 37 `i `uc
+-> -> 255 `i `uc
+-> -> 5 `i `uc
+-> -> 7 `i `uc
+-> -> 25 `i `uc
+-> -> 0 `i `uc
+-> -> 41 `i `uc
+-> -> 255 `i `uc
+-> -> 129 `i `uc
+-> -> 0 `i `uc
+-> -> 192 `i `uc
+..
+..
+..
+]
+"253
+[; ;device_keyboard.c: 253: static KEYBOARD keyboard;
+[v _keyboard `S700 ~T0 @X0 1 s ]
+"258
+[; ;device_keyboard.c: 258: static KEYBOARD_INPUT_REPORT inputReport __attribute__((address(0x500)));
+[v _inputReport `S693 ~T0 @X0 1 s@1280 ]
+"263
+[; ;device_keyboard.c: 263: static E2_REPORT e2Report __attribute__((address(0x510)));
+[v _e2Report `S696 ~T0 @X0 1 s@1296 ]
+"269
+[; ;device_keyboard.c: 269: static volatile E2_OUT_REPORT e2outReport __attribute__((address(0x518)));
+[v _e2outReport `VS697 ~T0 @X0 1 s@1304 ]
+"277
+[; ;device_keyboard.c: 277: static volatile KEYBOARD_OUTPUT_REPORT outputReport __attribute__((address(0x508)));
+[v _outputReport `VS698 ~T0 @X0 1 s@1288 ]
+"293
+[; ;device_keyboard.c: 293: KEYBOARD_INPUT_REPORT oldInputReport;
+[v _oldInputReport `S693 ~T0 @X0 1 e ]
+"294
+[; ;device_keyboard.c: 294: signed int keyboardIdleRate;
+[v _keyboardIdleRate `i ~T0 @X0 1 e ]
+"295
+[; ;device_keyboard.c: 295: signed int LocalSOFCount;
+[v _LocalSOFCount `i ~T0 @X0 1 e ]
+"296
+[; ;device_keyboard.c: 296: static signed int OldSOFCount;
+[v _OldSOFCount `i ~T0 @X0 1 s ]
+"298
+[; ;device_keyboard.c: 298: static void* ep2_handle;
+[v _ep2_handle `*v ~T0 @X0 1 s ]
+"299
+[; ;device_keyboard.c: 299: static void* ep2_out_handle;
+[v _ep2_out_handle `*v ~T0 @X0 1 s ]
+"300
+[; ;device_keyboard.c: 300: E2_REPORT old_ep2report;
+[v _old_ep2report `S696 ~T0 @X0 1 e ]
+"310
+[; ;device_keyboard.c: 310: void APP_KeyboardInit(void)
+[v _APP_KeyboardInit `(v ~T0 @X0 1 ef ]
+"311
+[; ;device_keyboard.c: 311: {
+{
+[e :U _APP_KeyboardInit ]
+[f ]
+"314
+[; ;device_keyboard.c: 314:     keyboard.lastINTransmission = 0;
+[e = . _keyboard 0 -> -> 0 `i `*v ]
+"315
+[; ;device_keyboard.c: 315:     ep2_handle = 0;
+[e = _ep2_handle -> -> 0 `i `*v ]
+"319
+[; ;device_keyboard.c: 319:     keyboardIdleRate = 500;
+[e = _keyboardIdleRate -> 500 `i ]
+"324
+[; ;device_keyboard.c: 324:     while(OldSOFCount != SOFCounter)
+[e $U 702  ]
+[e :U 703 ]
+"325
+[; ;device_keyboard.c: 325:     {
+{
+"326
+[; ;device_keyboard.c: 326:         OldSOFCount = SOFCounter;
+[e = _OldSOFCount _SOFCounter ]
+"327
+[; ;device_keyboard.c: 327:     }
+}
+[e :U 702 ]
+"324
+[; ;device_keyboard.c: 324:     while(OldSOFCount != SOFCounter)
+[e $ != _OldSOFCount _SOFCounter 703  ]
+[e :U 704 ]
+"330
+[; ;device_keyboard.c: 330:     USBEnableEndpoint(1, 0x02|0x04|0x10|0x08);
+[e ( _USBEnableEndpoint (2 , -> -> 1 `i `uc -> | | | -> 2 `i -> 4 `i -> 16 `i -> 8 `i `uc ]
+"331
+[; ;device_keyboard.c: 331:     USBEnableEndpoint(2, 0x02|0x04|0x10|0x08);
+[e ( _USBEnableEndpoint (2 , -> -> 2 `i `uc -> | | | -> 2 `i -> 4 `i -> 16 `i -> 8 `i `uc ]
+"334
+[; ;device_keyboard.c: 334:     keyboard.lastOUTTransmission = USBTransferOnePacket(1,0,(uint8_t*)&outputReport,sizeof(outputReport));
+[e = . _keyboard 1 ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _outputReport `*uc -> -> # _outputReport `ui `uc ]
+"335
+[; ;device_keyboard.c: 335:     ep2_out_handle = USBTransferOnePacket(2,0,(uint8_t*)&e2outReport,sizeof(e2outReport));
+[e = _ep2_out_handle ( _USBTransferOnePacket (4 , , , -> -> 2 `i `uc -> -> 0 `i `uc -> &U _e2outReport `*uc -> -> # _e2outReport `ui `uc ]
+"336
+[; ;device_keyboard.c: 336: }
+[e :UE 701 ]
+}
+[v F5608 `S705 ~T0 @X0 -> 8 `i t ]
+"357
+[; ;device_keyboard.c: 357: KeyStruct CodeChart[17][8] = {
+[v _CodeChart `F5608 ~T0 @X0 -> 17 `i e ]
+[i _CodeChart
+:U ..
+:U ..
+:U ..
+-> -> 62 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 63 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 66 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 67 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 68 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 69 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 33 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 30 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 31 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 32 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 34 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 35 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 36 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 37 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 24 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 21 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 23 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 28 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 12 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 20 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 26 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 53 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 57 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 43 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 41 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 58 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 59 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 60 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 61 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 38 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 39 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 45 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 46 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 5 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 2 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 73 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 74 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 75 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 78 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 77 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 76 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 22 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 7 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 49 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+..
+:U ..
+-> -> 18 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 19 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 20 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 21 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 23 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 9 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 10 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 11 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 26 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 22 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 27 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 14 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 29 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 9 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 15 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 42 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 48 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 24 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 28 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 18 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 47 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 19 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 14 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 11 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 52 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 51 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 40 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 13 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 25 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 27 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 5 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 25 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 29 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 6 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 17 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 230 `i `uc
+-> -> 64 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 227 `i `uc
+-> -> 8 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 225 `i `uc
+-> -> 2 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 226 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 13 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 231 `i `uc
+-> -> 128 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 44 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 224 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 56 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 55 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 54 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 16 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 17 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 5 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 229 `i `uc
+-> -> 32 `i `uc
+-> -> 2 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 90 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 93 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 84 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 83 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 95 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 92 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 89 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 86 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 87 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 88 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 99 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 91 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 94 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 97 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 85 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+..
+:U ..
+:U ..
+-> -> 82 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 80 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 81 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 79 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 228 `i `uc
+-> -> 16 `i `uc
+-> -> 2 `i `uc
+..
+:U ..
+-> -> 98 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 101 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+..
+]
+"380
+[; ;device_keyboard.c: 380: KeyStruct SendList[8];
+[v _SendList `S705 ~T0 @X0 -> 8 `i e ]
+"381
+[; ;device_keyboard.c: 381: uint8_t SendListCount = 0;
+[v _SendListCount `uc ~T0 @X0 1 e ]
+[i _SendListCount
+-> -> 0 `i `uc
+]
+"383
+[; ;device_keyboard.c: 383: KeyStruct CharKeyList[8],ModKeyList[8],EP2KeyList[8];
+[v _CharKeyList `S705 ~T0 @X0 -> 8 `i e ]
+[v _ModKeyList `S705 ~T0 @X0 -> 8 `i e ]
+[v _EP2KeyList `S705 ~T0 @X0 -> 8 `i e ]
+"384
+[; ;device_keyboard.c: 384: uint8_t CharListCount = 0,ModListCount = 0,EP2ListCount = 0;
+[v _CharListCount `uc ~T0 @X0 1 e ]
+[i _CharListCount
+-> -> 0 `i `uc
+]
+[v _ModListCount `uc ~T0 @X0 1 e ]
+[i _ModListCount
+-> -> 0 `i `uc
+]
+[v _EP2ListCount `uc ~T0 @X0 1 e ]
+[i _EP2ListCount
+-> -> 0 `i `uc
+]
+"388
+[; ;device_keyboard.c: 388: void SortSendList(void){
+[v _SortSendList `(v ~T0 @X0 1 ef ]
+{
+[e :U _SortSendList ]
+[f ]
+[v F5618 `S705 ~T0 @X0 1 s ]
+[i F5618
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+"412
+[; ;device_keyboard.c: 412:     for(uint8_t j = 0;j < 8;j++){ SendList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0};}
+[v F5619 `S705 ~T0 @X0 1 a ]
+"390
+[; ;device_keyboard.c: 390:     if(SendListCount == 0){return;}
+[e $ ! == -> _SendListCount `i -> 0 `i 707  ]
+{
+[e $UE 706  ]
+}
+[e :U 707 ]
+"392
+[; ;device_keyboard.c: 392:     for(uint8_t i = 0; i < SendListCount; i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 711  ]
+[e :U 708 ]
+{
+"393
+[; ;device_keyboard.c: 393:         switch(SendList[i].type)
+[e $U 713  ]
+"394
+[; ;device_keyboard.c: 394:         {
+{
+"395
+[; ;device_keyboard.c: 395:             case 1 :
+[e :U 714 ]
+"396
+[; ;device_keyboard.c: 396:                 CharKeyList[CharListCount] = SendList[i];
+[e = *U + &U _CharKeyList * -> _CharListCount `ux -> -> # *U &U _CharKeyList `ui `ux *U + &U _SendList * -> _i `ux -> -> # *U &U _SendList `ui `ux ]
+"397
+[; ;device_keyboard.c: 397:                 CharListCount++;
+[e ++ _CharListCount -> -> 1 `i `uc ]
+"398
+[; ;device_keyboard.c: 398:                 break;
+[e $U 712  ]
+"399
+[; ;device_keyboard.c: 399:             case 2 :
+[e :U 715 ]
+"400
+[; ;device_keyboard.c: 400:                 ModKeyList[ModListCount] = SendList[i];
+[e = *U + &U _ModKeyList * -> _ModListCount `ux -> -> # *U &U _ModKeyList `ui `ux *U + &U _SendList * -> _i `ux -> -> # *U &U _SendList `ui `ux ]
+"401
+[; ;device_keyboard.c: 401:                 ModListCount++;
+[e ++ _ModListCount -> -> 1 `i `uc ]
+"402
+[; ;device_keyboard.c: 402:                 break;
+[e $U 712  ]
+"403
+[; ;device_keyboard.c: 403:             case 3 :
+[e :U 716 ]
+"404
+[; ;device_keyboard.c: 404:                 if(EP2ListCount < 4){
+[e $ ! < -> _EP2ListCount `i -> 4 `i 717  ]
+{
+"405
+[; ;device_keyboard.c: 405:                     EP2KeyList[EP2ListCount] = SendList[i];
+[e = *U + &U _EP2KeyList * -> _EP2ListCount `ux -> -> # *U &U _EP2KeyList `ui `ux *U + &U _SendList * -> _i `ux -> -> # *U &U _SendList `ui `ux ]
+"406
+[; ;device_keyboard.c: 406:                     EP2ListCount++;
+[e ++ _EP2ListCount -> -> 1 `i `uc ]
+"407
+[; ;device_keyboard.c: 407:                 }
+}
+[e :U 717 ]
+"408
+[; ;device_keyboard.c: 408:                 break;
+[e $U 712  ]
+"409
+[; ;device_keyboard.c: 409:         }
+}
+[e $U 712  ]
+[e :U 713 ]
+[e [\ -> . *U + &U _SendList * -> _i `ux -> -> # *U &U _SendList `ui `ux 2 `i , $ -> 1 `i 714
+ , $ -> 2 `i 715
+ , $ -> 3 `i 716
+ 712 ]
+[e :U 712 ]
+"410
+[; ;device_keyboard.c: 410:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 711 ]
+[e $ < -> _i `i -> _SendListCount `i 708  ]
+[e :U 709 ]
+}
+"412
+[; ;device_keyboard.c: 412:     for(uint8_t j = 0;j < 8;j++){ SendList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0};}
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `i -> 8 `i 718  ]
+[e $U 719  ]
+[e :U 718 ]
+{
+[e = *U + &U _SendList * -> _j `ux -> -> # *U &U _SendList `ui `ux ; = F5619 F5618 F5619 ]
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `i -> 8 `i 718  ]
+[e :U 719 ]
+}
+"414
+[; ;device_keyboard.c: 414:     SendListCount = 0;
+[e = _SendListCount -> -> 0 `i `uc ]
+"416
+[; ;device_keyboard.c: 416: }
+[e :UE 706 ]
+}
+"418
+[; ;device_keyboard.c: 418: void AddToSendList(KeyStruct keyCode){
+[v _AddToSendList `(v ~T0 @X0 1 ef1`S705 ]
+{
+[e :U _AddToSendList ]
+[v _keyCode `S705 ~T0 @X0 1 r1 ]
+[f ]
+"420
+[; ;device_keyboard.c: 420:     if(SendListCount < 8 ){
+[e $ ! < -> _SendListCount `i -> 8 `i 722  ]
+{
+"421
+[; ;device_keyboard.c: 421:         SendList[SendListCount] = keyCode;
+[e = *U + &U _SendList * -> _SendListCount `ux -> -> # *U &U _SendList `ui `ux _keyCode ]
+"422
+[; ;device_keyboard.c: 422:         SendListCount++;
+[e ++ _SendListCount -> -> 1 `i `uc ]
+"423
+[; ;device_keyboard.c: 423:     }
+}
+[e :U 722 ]
+"424
+[; ;device_keyboard.c: 424: }
+[e :UE 721 ]
+}
+"426
+[; ;device_keyboard.c: 426: void ProcessLine(uint8_t lineNo){
+[v _ProcessLine `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ProcessLine ]
+[v _lineNo `uc ~T0 @X0 1 r1 ]
+[f ]
+"428
+[; ;device_keyboard.c: 428:     uint8_t readBuf, tempBuf;
+[v _readBuf `uc ~T0 @X0 1 a ]
+[v _tempBuf `uc ~T0 @X0 1 a ]
+"429
+[; ;device_keyboard.c: 429:     uint8_t filt = 0b00000001;
+[v _filt `uc ~T0 @X0 1 a ]
+[e = _filt -> -> 1 `i `uc ]
+"433
+[; ;device_keyboard.c: 433:     readBuf = 0;
+[e = _readBuf -> -> 0 `i `uc ]
+"434
+[; ;device_keyboard.c: 434:     _delay((unsigned long)((5)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"436
+[; ;device_keyboard.c: 436:     for(uint8_t x = 0; x<5; x++){
+{
+[v _x `uc ~T0 @X0 1 a ]
+[e = _x -> -> 0 `i `uc ]
+[e $ < -> _x `i -> 5 `i 724  ]
+[e $U 725  ]
+[e :U 724 ]
+{
+"437
+[; ;device_keyboard.c: 437:         tempBuf = PORTA;
+[e = _tempBuf _PORTA ]
+"438
+[; ;device_keyboard.c: 438:         readBuf = readBuf | tempBuf;
+[e = _readBuf -> | -> _readBuf `i -> _tempBuf `i `uc ]
+"439
+[; ;device_keyboard.c: 439:     }
+}
+[e ++ _x -> -> 1 `i `uc ]
+[e $ < -> _x `i -> 5 `i 724  ]
+[e :U 725 ]
+}
+"442
+[; ;device_keyboard.c: 442:     for(uint8_t i = 0; i < 8; i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 8 `i 727  ]
+[e $U 728  ]
+[e :U 727 ]
+{
+"443
+[; ;device_keyboard.c: 443:         if((readBuf & filt) != 0){
+[e $ ! != & -> _readBuf `i -> _filt `i -> 0 `i 730  ]
+{
+"444
+[; ;device_keyboard.c: 444:             AddToSendList(CodeChart[lineNo][i]);
+[e ( _AddToSendList (1 *U + &U *U + &U _CodeChart * -> _lineNo `ux -> * -> # *U &U *U &U _CodeChart `ui -> -> 8 `i `ui `ux * -> _i `ux -> -> # *U &U *U + &U _CodeChart * -> _lineNo `ux -> * -> # *U &U *U &U _CodeChart `ui -> -> 8 `i `ui `ux `ui `ux ]
+"445
+[; ;device_keyboard.c: 445:         }
+}
+[e :U 730 ]
+"447
+[; ;device_keyboard.c: 447:         filt = filt << 1;
+[e = _filt -> << -> _filt `i -> 1 `i `uc ]
+"448
+[; ;device_keyboard.c: 448:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 8 `i 727  ]
+[e :U 728 ]
+}
+"449
+[; ;device_keyboard.c: 449: }
+[e :UE 723 ]
+}
+"452
+[; ;device_keyboard.c: 452: void ProcessKeyboard(void){
+[v _ProcessKeyboard `(v ~T0 @X0 1 ef ]
+{
+[e :U _ProcessKeyboard ]
+[f ]
+"454
+[; ;device_keyboard.c: 454:     uint8_t line = 0;
+[v _line `uc ~T0 @X0 1 a ]
+[e = _line -> -> 0 `i `uc ]
+"455
+[; ;device_keyboard.c: 455:     uint8_t latWriter = 0b00000001;
+[v _latWriter `uc ~T0 @X0 1 a ]
+[e = _latWriter -> -> 1 `i `uc ]
+"457
+[; ;device_keyboard.c: 457:     for(uint8_t n = 0; n < 8; n++){
+{
+[v _n `uc ~T0 @X0 1 a ]
+[e = _n -> -> 0 `i `uc ]
+[e $ < -> _n `i -> 8 `i 732  ]
+[e $U 733  ]
+[e :U 732 ]
+{
+"459
+[; ;device_keyboard.c: 459:         LATD = latWriter;
+[e = _LATD _latWriter ]
+"460
+[; ;device_keyboard.c: 460:         latWriter = latWriter << 1;
+[e = _latWriter -> << -> _latWriter `i -> 1 `i `uc ]
+"461
+[; ;device_keyboard.c: 461:         ProcessLine(line);
+[e ( _ProcessLine (1 _line ]
+"462
+[; ;device_keyboard.c: 462:         line++;
+[e ++ _line -> -> 1 `i `uc ]
+"463
+[; ;device_keyboard.c: 463:     }
+}
+[e ++ _n -> -> 1 `i `uc ]
+[e $ < -> _n `i -> 8 `i 732  ]
+[e :U 733 ]
+}
+"465
+[; ;device_keyboard.c: 465:     LATD = 0b00000000;
+[e = _LATD -> -> 0 `i `uc ]
+"466
+[; ;device_keyboard.c: 466:     latWriter = 0b00000001;
+[e = _latWriter -> -> 1 `i `uc ]
+"468
+[; ;device_keyboard.c: 468:     for(uint8_t n = 0; n < 6; n++){
+{
+[v _n `uc ~T0 @X0 1 a ]
+[e = _n -> -> 0 `i `uc ]
+[e $ < -> _n `i -> 6 `i 735  ]
+[e $U 736  ]
+[e :U 735 ]
+{
+"470
+[; ;device_keyboard.c: 470:         LATB = latWriter;
+[e = _LATB _latWriter ]
+"471
+[; ;device_keyboard.c: 471:         latWriter = latWriter << 1;
+[e = _latWriter -> << -> _latWriter `i -> 1 `i `uc ]
+"472
+[; ;device_keyboard.c: 472:         ProcessLine(line);
+[e ( _ProcessLine (1 _line ]
+"473
+[; ;device_keyboard.c: 473:         line++;
+[e ++ _line -> -> 1 `i `uc ]
+"475
+[; ;device_keyboard.c: 475:     }
+}
+[e ++ _n -> -> 1 `i `uc ]
+[e $ < -> _n `i -> 6 `i 735  ]
+[e :U 736 ]
+}
+"477
+[; ;device_keyboard.c: 477:     LATB = 0b00000000;
+[e = _LATB -> -> 0 `i `uc ]
+"478
+[; ;device_keyboard.c: 478:     latWriter = 0b00000001;
+[e = _latWriter -> -> 1 `i `uc ]
+"480
+[; ;device_keyboard.c: 480:     for(uint8_t n = 0; n < 3; n++){
+{
+[v _n `uc ~T0 @X0 1 a ]
+[e = _n -> -> 0 `i `uc ]
+[e $ < -> _n `i -> 3 `i 738  ]
+[e $U 739  ]
+[e :U 738 ]
+{
+"482
+[; ;device_keyboard.c: 482:         LATC = latWriter;
+[e = _LATC _latWriter ]
+"483
+[; ;device_keyboard.c: 483:         latWriter = latWriter << 1;
+[e = _latWriter -> << -> _latWriter `i -> 1 `i `uc ]
+"485
+[; ;device_keyboard.c: 485:         ProcessLine(line);
+[e ( _ProcessLine (1 _line ]
+"486
+[; ;device_keyboard.c: 486:         line++;
+[e ++ _line -> -> 1 `i `uc ]
+"488
+[; ;device_keyboard.c: 488:     }
+}
+[e ++ _n -> -> 1 `i `uc ]
+[e $ < -> _n `i -> 3 `i 738  ]
+[e :U 739 ]
+}
+"490
+[; ;device_keyboard.c: 490:     LATC = 0b00000000;
+[e = _LATC -> -> 0 `i `uc ]
+"492
+[; ;device_keyboard.c: 492:     SortSendList();
+[e ( _SortSendList ..  ]
+"495
+[; ;device_keyboard.c: 495: }
+[e :UE 731 ]
+}
+"498
+[; ;device_keyboard.c: 498: void APP_KeyboardTasks(void)
+[v _APP_KeyboardTasks `(v ~T0 @X0 1 ef ]
+"499
+[; ;device_keyboard.c: 499: {
+{
+[e :U _APP_KeyboardTasks ]
+[f ]
+[v F5639 `S705 ~T0 @X0 1 s ]
+[i F5639
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+"631
+[; ;device_keyboard.c: 631:     for(uint8_t j = 0;j < 8;j++){ ModKeyList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0}; }
+[v F5640 `S705 ~T0 @X0 1 a ]
+[v F5641 `S705 ~T0 @X0 1 s ]
+[i F5641
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+"632
+[; ;device_keyboard.c: 632:     for(uint8_t j = 0;j < 8;j++){ CharKeyList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0}; }
+[v F5642 `S705 ~T0 @X0 1 a ]
+[v F5643 `S705 ~T0 @X0 1 s ]
+[i F5643
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+"674
+[; ;device_keyboard.c: 674:     for(uint8_t j = 0;j < sizeof(EP2KeyList);j++){ EP2KeyList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0}; }
+[v F5644 `S705 ~T0 @X0 1 a ]
+"500
+[; ;device_keyboard.c: 500:     signed int TimeDeltaMilliseconds;
+[v _TimeDeltaMilliseconds `i ~T0 @X0 1 a ]
+"501
+[; ;device_keyboard.c: 501:     unsigned char i;
+[v _i `uc ~T0 @X0 1 a ]
+"502
+[; ;device_keyboard.c: 502:     _Bool needToSendNewReportPacket;
+[v _needToSendNewReportPacket `a ~T0 @X0 1 a ]
+"507
+[; ;device_keyboard.c: 507:     if( USBDeviceState < CONFIGURED_STATE )
+[e $ ! < -> _USBDeviceState `ui -> . `E5302 6 `ui 742  ]
+"508
+[; ;device_keyboard.c: 508:     {
+{
+"509
+[; ;device_keyboard.c: 509:         return;
+[e $UE 741  ]
+"510
+[; ;device_keyboard.c: 510:     }
+}
+[e :U 742 ]
+"516
+[; ;device_keyboard.c: 516:     if( UCONbits.SUSPND== 1 )
+[e $ ! == -> . . _UCONbits 0 1 `i -> 1 `i 743  ]
+"517
+[; ;device_keyboard.c: 517:     {
+{
+"525
+[; ;device_keyboard.c: 525:         return;
+[e $UE 741  ]
+"526
+[; ;device_keyboard.c: 526:     }
+}
+[e :U 743 ]
+"534
+[; ;device_keyboard.c: 534:     while(LocalSOFCount != SOFCounter)
+[e $U 744  ]
+[e :U 745 ]
+"535
+[; ;device_keyboard.c: 535:     {
+{
+"536
+[; ;device_keyboard.c: 536:         LocalSOFCount = SOFCounter;
+[e = _LocalSOFCount _SOFCounter ]
+"537
+[; ;device_keyboard.c: 537:     }
+}
+[e :U 744 ]
+"534
+[; ;device_keyboard.c: 534:     while(LocalSOFCount != SOFCounter)
+[e $ != _LocalSOFCount _SOFCounter 745  ]
+[e :U 746 ]
+"540
+[; ;device_keyboard.c: 540:     TimeDeltaMilliseconds = LocalSOFCount - OldSOFCount;
+[e = _TimeDeltaMilliseconds - _LocalSOFCount _OldSOFCount ]
+"541
+[; ;device_keyboard.c: 541:     if(TimeDeltaMilliseconds < 0)
+[e $ ! < _TimeDeltaMilliseconds -> 0 `i 747  ]
+"542
+[; ;device_keyboard.c: 542:     {
+{
+"543
+[; ;device_keyboard.c: 543:         TimeDeltaMilliseconds = (32767 - OldSOFCount) + LocalSOFCount;
+[e = _TimeDeltaMilliseconds + - -> 32767 `i _OldSOFCount _LocalSOFCount ]
+"544
+[; ;device_keyboard.c: 544:     }
+}
+[e :U 747 ]
+"546
+[; ;device_keyboard.c: 546:     if(TimeDeltaMilliseconds > 5000)
+[e $ ! > _TimeDeltaMilliseconds -> 5000 `i 748  ]
+"547
+[; ;device_keyboard.c: 547:     {
+{
+"548
+[; ;device_keyboard.c: 548:         OldSOFCount = LocalSOFCount - 5000;
+[e = _OldSOFCount - _LocalSOFCount -> 5000 `i ]
+"549
+[; ;device_keyboard.c: 549:     }
+}
+[e :U 748 ]
+"553
+[; ;device_keyboard.c: 553:     ProcessKeyboard();
+[e ( _ProcessKeyboard ..  ]
+"561
+[; ;device_keyboard.c: 561:     if(((keyboard.lastINTransmission != 0x0000) && ((*(volatile uint8_t*)keyboard.lastINTransmission & 0x80) != 0x00)) == 0)
+[e $ ! == -> && != . _keyboard 0 -> -> 0 `i `*v != & -> *U -> . _keyboard 0 `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 749  ]
+"562
+[; ;device_keyboard.c: 562:     {
+{
+"564
+[; ;device_keyboard.c: 564:         memset(&inputReport, 0, sizeof(inputReport));
+[e ( _memset (3 , , -> &U _inputReport `*v -> 0 `i -> # _inputReport `ui ]
+"569
+[; ;device_keyboard.c: 569:         if(ModListCount > 0){
+[e $ ! > -> _ModListCount `i -> 0 `i 750  ]
+{
+"570
+[; ;device_keyboard.c: 570:             for(uint8_t j = 0;j < ModListCount;j++){
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $U 754  ]
+[e :U 751 ]
+{
+"572
+[; ;device_keyboard.c: 572:                 inputReport.modifiers.value = ModKeyList[j].modifier | inputReport.modifiers.value;
+[e = . . _inputReport 0 0 -> | -> . *U + &U _ModKeyList * -> _j `ux -> -> # *U &U _ModKeyList `ui `ux 1 `i -> . . _inputReport 0 0 `i `uc ]
+"575
+[; ;device_keyboard.c: 575:             }
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e :U 754 ]
+[e $ < -> _j `i -> _ModListCount `i 751  ]
+[e :U 752 ]
+}
+"576
+[; ;device_keyboard.c: 576:         }
+}
+[e :U 750 ]
+"579
+[; ;device_keyboard.c: 579:         if(CharListCount > 0){
+[e $ ! > -> _CharListCount `i -> 0 `i 755  ]
+{
+"580
+[; ;device_keyboard.c: 580:             for(uint8_t j = 0; j < CharListCount; j++){
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $U 759  ]
+[e :U 756 ]
+{
+"581
+[; ;device_keyboard.c: 581:                 if(j < 6){
+[e $ ! < -> _j `i -> 6 `i 760  ]
+{
+"582
+[; ;device_keyboard.c: 582:                     inputReport.modifiers.value = CharKeyList[j].modifier | inputReport.modifiers.value;
+[e = . . _inputReport 0 0 -> | -> . *U + &U _CharKeyList * -> _j `ux -> -> # *U &U _CharKeyList `ui `ux 1 `i -> . . _inputReport 0 0 `i `uc ]
+"583
+[; ;device_keyboard.c: 583:                     inputReport.keys[j] = CharKeyList[j].keyCode;
+[e = *U + &U . _inputReport 2 * -> _j `ux -> -> # *U &U . _inputReport 2 `ui `ux . *U + &U _CharKeyList * -> _j `ux -> -> # *U &U _CharKeyList `ui `ux 0 ]
+"584
+[; ;device_keyboard.c: 584:                 }
+}
+[e :U 760 ]
+"585
+[; ;device_keyboard.c: 585:             }
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e :U 759 ]
+[e $ < -> _j `i -> _CharListCount `i 756  ]
+[e :U 757 ]
+}
+"586
+[; ;device_keyboard.c: 586:         }
+}
+[e :U 755 ]
+"592
+[; ;device_keyboard.c: 592:         needToSendNewReportPacket = 0;
+[e = _needToSendNewReportPacket -> -> 0 `i `a ]
+"593
+[; ;device_keyboard.c: 593:         for(i = 0; i < sizeof(inputReport); i++)
+{
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `ui -> # _inputReport `ui 761  ]
+[e $U 762  ]
+[e :U 761 ]
+"594
+[; ;device_keyboard.c: 594:         {
+{
+"595
+[; ;device_keyboard.c: 595:             if(*((uint8_t*)&oldInputReport + i) != *((uint8_t*)&inputReport + i))
+[e $ ! != -> *U + -> &U _oldInputReport `*uc * -> -> _i `i `x -> -> # *U -> &U _oldInputReport `*uc `i `x `i -> *U + -> &U _inputReport `*uc * -> -> _i `i `x -> -> # *U -> &U _inputReport `*uc `i `x `i 764  ]
+"596
+[; ;device_keyboard.c: 596:             {
+{
+"597
+[; ;device_keyboard.c: 597:                 needToSendNewReportPacket = 1;
+[e = _needToSendNewReportPacket -> -> 1 `i `a ]
+"598
+[; ;device_keyboard.c: 598:                 break;
+[e $U 762  ]
+"599
+[; ;device_keyboard.c: 599:             }
+}
+[e :U 764 ]
+"600
+[; ;device_keyboard.c: 600:         }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `ui -> # _inputReport `ui 761  ]
+[e :U 762 ]
+}
+"605
+[; ;device_keyboard.c: 605:         if(keyboardIdleRate != 0)
+[e $ ! != _keyboardIdleRate -> 0 `i 765  ]
+"606
+[; ;device_keyboard.c: 606:         {
+{
+"607
+[; ;device_keyboard.c: 607:             if(TimeDeltaMilliseconds >= keyboardIdleRate)
+[e $ ! >= _TimeDeltaMilliseconds _keyboardIdleRate 766  ]
+"608
+[; ;device_keyboard.c: 608:             {
+{
+"609
+[; ;device_keyboard.c: 609:                 needToSendNewReportPacket = 1;
+[e = _needToSendNewReportPacket -> -> 1 `i `a ]
+"610
+[; ;device_keyboard.c: 610:             }
+}
+[e :U 766 ]
+"611
+[; ;device_keyboard.c: 611:         }
+}
+[e :U 765 ]
+"617
+[; ;device_keyboard.c: 617:         if(needToSendNewReportPacket == 1)
+[e $ ! == -> _needToSendNewReportPacket `i -> 1 `i 767  ]
+"618
+[; ;device_keyboard.c: 618:         {
+{
+"622
+[; ;device_keyboard.c: 622:             oldInputReport = inputReport;
+[e = _oldInputReport _inputReport ]
+"625
+[; ;device_keyboard.c: 625:             keyboard.lastINTransmission = USBTransferOnePacket(1,1,(uint8_t*)&inputReport,sizeof(inputReport));
+[e = . _keyboard 0 ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 1 `i `uc -> &U _inputReport `*uc -> -> # _inputReport `ui `uc ]
+"626
+[; ;device_keyboard.c: 626:             OldSOFCount = LocalSOFCount;
+[e = _OldSOFCount _LocalSOFCount ]
+"627
+[; ;device_keyboard.c: 627:         }
+}
+[e :U 767 ]
+"629
+[; ;device_keyboard.c: 629:     }
+}
+[e :U 749 ]
+"631
+[; ;device_keyboard.c: 631:     for(uint8_t j = 0;j < 8;j++){ ModKeyList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0}; }
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `i -> 8 `i 768  ]
+[e $U 769  ]
+[e :U 768 ]
+{
+[e = *U + &U _ModKeyList * -> _j `ux -> -> # *U &U _ModKeyList `ui `ux ; = F5640 F5639 F5640 ]
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `i -> 8 `i 768  ]
+[e :U 769 ]
+}
+"632
+[; ;device_keyboard.c: 632:     for(uint8_t j = 0;j < 8;j++){ CharKeyList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0}; }
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `i -> 8 `i 771  ]
+[e $U 772  ]
+[e :U 771 ]
+{
+[e = *U + &U _CharKeyList * -> _j `ux -> -> # *U &U _CharKeyList `ui `ux ; = F5642 F5641 F5642 ]
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `i -> 8 `i 771  ]
+[e :U 772 ]
+}
+"633
+[; ;device_keyboard.c: 633:     ModListCount = 0;
+[e = _ModListCount -> -> 0 `i `uc ]
+"634
+[; ;device_keyboard.c: 634:     CharListCount = 0;
+[e = _CharListCount -> -> 0 `i `uc ]
+"638
+[; ;device_keyboard.c: 638:     if(((ep2_handle != 0x0000) && ((*(volatile uint8_t*)ep2_handle & 0x80) != 0x00)) == 0){
+[e $ ! == -> && != _ep2_handle -> -> 0 `i `*v != & -> *U -> _ep2_handle `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 774  ]
+{
+"642
+[; ;device_keyboard.c: 642:             for(uint8_t j = 0; j < 4; j++){e2Report.data[j] = 0;}
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `i -> 4 `i 775  ]
+[e $U 776  ]
+[e :U 775 ]
+{
+[e = *U + &U . _e2Report 0 * -> _j `ux -> -> # *U &U . _e2Report 0 `ui `ux -> -> 0 `i `uc ]
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `i -> 4 `i 775  ]
+[e :U 776 ]
+}
+"645
+[; ;device_keyboard.c: 645:             if(EP2ListCount > 0){
+[e $ ! > -> _EP2ListCount `i -> 0 `i 778  ]
+{
+"647
+[; ;device_keyboard.c: 647:                 for(uint8_t j = 0; j < EP2ListCount; j++){
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $U 782  ]
+[e :U 779 ]
+{
+"648
+[; ;device_keyboard.c: 648:                     e2Report.data[j] = EP2KeyList[j].keyCode;
+[e = *U + &U . _e2Report 0 * -> _j `ux -> -> # *U &U . _e2Report 0 `ui `ux . *U + &U _EP2KeyList * -> _j `ux -> -> # *U &U _EP2KeyList `ui `ux 0 ]
+"649
+[; ;device_keyboard.c: 649:                 }
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e :U 782 ]
+[e $ < -> _j `i -> _EP2ListCount `i 779  ]
+[e :U 780 ]
+}
+"650
+[; ;device_keyboard.c: 650:             }
+}
+[e :U 778 ]
+"652
+[; ;device_keyboard.c: 652:             uint8_t shd_send = 0;
+[v _shd_send `uc ~T0 @X0 1 a ]
+[e = _shd_send -> -> 0 `i `uc ]
+"655
+[; ;device_keyboard.c: 655:             for(uint8_t j = 0; j < sizeof(e2Report.data);j++){
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `ui * -> # *U &U . _e2Report 0 `ui -> -> 8 `i `ui 783  ]
+[e $U 784  ]
+[e :U 783 ]
+{
+"657
+[; ;device_keyboard.c: 657:                 if(old_ep2report.data[j] != e2Report.data[j]){
+[e $ ! != -> *U + &U . _old_ep2report 0 * -> _j `ux -> -> # *U &U . _old_ep2report 0 `ui `ux `i -> *U + &U . _e2Report 0 * -> _j `ux -> -> # *U &U . _e2Report 0 `ui `ux `i 786  ]
+{
+"658
+[; ;device_keyboard.c: 658:                    shd_send = 1;
+[e = _shd_send -> -> 1 `i `uc ]
+"659
+[; ;device_keyboard.c: 659:                    break;
+[e $U 784  ]
+"660
+[; ;device_keyboard.c: 660:                 }
+}
+[e :U 786 ]
+"661
+[; ;device_keyboard.c: 661:             }
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `ui * -> # *U &U . _e2Report 0 `ui -> -> 8 `i `ui 783  ]
+[e :U 784 ]
+}
+"664
+[; ;device_keyboard.c: 664:             if(shd_send == 1){
+[e $ ! == -> _shd_send `i -> 1 `i 787  ]
+{
+"666
+[; ;device_keyboard.c: 666:                 ep2_handle = USBTransferOnePacket(2,1,(uint8_t*)&e2Report,sizeof(e2Report));
+[e = _ep2_handle ( _USBTransferOnePacket (4 , , , -> -> 2 `i `uc -> -> 1 `i `uc -> &U _e2Report `*uc -> -> # _e2Report `ui `uc ]
+"668
+[; ;device_keyboard.c: 668:                 old_ep2report = e2Report;
+[e = _old_ep2report _e2Report ]
+"670
+[; ;device_keyboard.c: 670:             }
+}
+[e :U 787 ]
+"672
+[; ;device_keyboard.c: 672:     }
+}
+[e :U 774 ]
+"674
+[; ;device_keyboard.c: 674:     for(uint8_t j = 0;j < sizeof(EP2KeyList);j++){ EP2KeyList[j] = (KeyStruct){.keyCode = 0,.modifier = 0,.type = 0}; }
+{
+[v _j `uc ~T0 @X0 1 a ]
+[e = _j -> -> 0 `i `uc ]
+[e $ < -> _j `ui -> # _EP2KeyList `ui 788  ]
+[e $U 789  ]
+[e :U 788 ]
+{
+[e = *U + &U _EP2KeyList * -> _j `ux -> -> # *U &U _EP2KeyList `ui `ux ; = F5644 F5643 F5644 ]
+}
+[e ++ _j -> -> 1 `i `uc ]
+[e $ < -> _j `ui -> # _EP2KeyList `ui 788  ]
+[e :U 789 ]
+}
+"675
+[; ;device_keyboard.c: 675:     EP2ListCount = 0;
+[e = _EP2ListCount -> -> 0 `i `uc ]
+"686
+[; ;device_keyboard.c: 686:     if(((keyboard.lastOUTTransmission != 0x0000) && ((*(volatile uint8_t*)keyboard.lastOUTTransmission & 0x80) != 0x00)) == 0)
+[e $ ! == -> && != . _keyboard 1 -> -> 0 `i `*v != & -> *U -> . _keyboard 1 `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 791  ]
+"687
+[; ;device_keyboard.c: 687:     {
+{
+"688
+[; ;device_keyboard.c: 688:         KeyboardProcessOutputReport();
+[e ( _KeyboardProcessOutputReport ..  ]
+"690
+[; ;device_keyboard.c: 690:         keyboard.lastOUTTransmission = USBTransferOnePacket(1,0,(uint8_t*)&outputReport,sizeof(outputReport));
+[e = . _keyboard 1 ( _USBTransferOnePacket (4 , , , -> -> 1 `i `uc -> -> 0 `i `uc -> &U _outputReport `*uc -> -> # _outputReport `ui `uc ]
+"691
+[; ;device_keyboard.c: 691:     }
+}
+[e :U 791 ]
+"693
+[; ;device_keyboard.c: 693:     if(((ep2_out_handle != 0x0000) && ((*(volatile uint8_t*)ep2_out_handle & 0x80) != 0x00)) == 0){
+[e $ ! == -> && != _ep2_out_handle -> -> 0 `i `*v != & -> *U -> _ep2_out_handle `*Vuc `i -> 128 `i -> 0 `i `i -> 0 `i 792  ]
+{
+"694
+[; ;device_keyboard.c: 694:         ep2_out_handle = USBTransferOnePacket(2,0,(uint8_t*)&e2outReport,sizeof(e2outReport));
+[e = _ep2_out_handle ( _USBTransferOnePacket (4 , , , -> -> 2 `i `uc -> -> 0 `i `uc -> &U _e2outReport `*uc -> -> # _e2outReport `ui `uc ]
+"695
+[; ;device_keyboard.c: 695:     }
+}
+[e :U 792 ]
+"697
+[; ;device_keyboard.c: 697:     return;
+[e $UE 741  ]
+"698
+[; ;device_keyboard.c: 698: }
+[e :UE 741 ]
+}
+"700
+[; ;device_keyboard.c: 700: static void KeyboardProcessOutputReport(void)
+[v _KeyboardProcessOutputReport `(v ~T0 @X0 1 sf ]
+"701
+[; ;device_keyboard.c: 701: {
+{
+[e :U _KeyboardProcessOutputReport ]
+[f ]
+"702
+[; ;device_keyboard.c: 702:     if(outputReport.leds.capsLock)
+[e $ ! != -> . . _outputReport 1 1 `i -> 0 `i 794  ]
+"703
+[; ;device_keyboard.c: 703:     {
+{
+"704
+[; ;device_keyboard.c: 704:         LED_On(LED_E1);
+[e ( _LED_On (1 . `E5018 1 ]
+"705
+[; ;device_keyboard.c: 705:     }
+}
+[e $U 795  ]
+"706
+[; ;device_keyboard.c: 706:     else
+[e :U 794 ]
+"707
+[; ;device_keyboard.c: 707:     {
+{
+"708
+[; ;device_keyboard.c: 708:         LED_Off(LED_E1);
+[e ( _LED_Off (1 . `E5018 1 ]
+"709
+[; ;device_keyboard.c: 709:     }
+}
+[e :U 795 ]
+"711
+[; ;device_keyboard.c: 711:     if(outputReport.leds.numLock)
+[e $ ! != -> . . _outputReport 1 0 `i -> 0 `i 796  ]
+"712
+[; ;device_keyboard.c: 712:     {
+{
+"713
+[; ;device_keyboard.c: 713:         LED_On(LED_E2);
+[e ( _LED_On (1 . `E5018 2 ]
+"714
+[; ;device_keyboard.c: 714:     }
+}
+[e $U 797  ]
+"715
+[; ;device_keyboard.c: 715:     else
+[e :U 796 ]
+"716
+[; ;device_keyboard.c: 716:     {
+{
+"717
+[; ;device_keyboard.c: 717:         LED_Off(LED_E2);
+[e ( _LED_Off (1 . `E5018 2 ]
+"718
+[; ;device_keyboard.c: 718:     }
+}
+[e :U 797 ]
+"720
+[; ;device_keyboard.c: 720:     if(outputReport.leds.scrollLock)
+[e $ ! != -> . . _outputReport 1 2 `i -> 0 `i 798  ]
+"721
+[; ;device_keyboard.c: 721:     {
+{
+"722
+[; ;device_keyboard.c: 722:         LED_On(LED_E3);
+[e ( _LED_On (1 . `E5018 3 ]
+"723
+[; ;device_keyboard.c: 723:     }
+}
+[e $U 799  ]
+"724
+[; ;device_keyboard.c: 724:     else
+[e :U 798 ]
+"725
+[; ;device_keyboard.c: 725:     {
+{
+"726
+[; ;device_keyboard.c: 726:         LED_Off(LED_E3);
+[e ( _LED_Off (1 . `E5018 3 ]
+"727
+[; ;device_keyboard.c: 727:     }
+}
+[e :U 799 ]
+"728
+[; ;device_keyboard.c: 728: }
+[e :UE 793 ]
+}
+"730
+[; ;device_keyboard.c: 730: static void USBHIDCBSetReportComplete(void)
+[v _USBHIDCBSetReportComplete `(v ~T0 @X0 1 sf ]
+"731
+[; ;device_keyboard.c: 731: {
+{
+[e :U _USBHIDCBSetReportComplete ]
+[f ]
+"734
+[; ;device_keyboard.c: 734:     outputReport.value = CtrlTrfData[0];
+[e = . _outputReport 0 *U + &U _CtrlTrfData * -> -> -> 0 `i `ui `ux -> -> # *U &U _CtrlTrfData `ui `ux ]
+"737
+[; ;device_keyboard.c: 737:     KeyboardProcessOutputReport();
+[e ( _KeyboardProcessOutputReport ..  ]
+"738
+[; ;device_keyboard.c: 738: }
+[e :UE 800 ]
+}
+"740
+[; ;device_keyboard.c: 740: void USBHIDCBSetReportHandler(void)
+[v _USBHIDCBSetReportHandler `(v ~T0 @X0 1 ef ]
+"741
+[; ;device_keyboard.c: 741: {
+{
+[e :U _USBHIDCBSetReportHandler ]
+[f ]
+"745
+[; ;device_keyboard.c: 745:     {outPipes[0].pDst.bRam = (uint8_t*)&CtrlTrfData;outPipes[0].wCount.Val = 8;outPipes[0].pFunc = USBHIDCBSetReportComplete;outPipes[0].info.bits.busy = 1; };
+{
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 0 0 -> &U _CtrlTrfData `*uc ]
+[e = . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 2 0 -> -> 8 `i `us ]
+[e = . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 3 &U _USBHIDCBSetReportComplete ]
+[e = . . . *U + &U _outPipes * -> -> -> 0 `i `ui `ux -> -> # *U &U _outPipes `ui `ux 1 0 1 -> -> 1 `i `uc ]
+}
+"746
+[; ;device_keyboard.c: 746: }
+[e :UE 801 ]
+}
+"751
+[; ;device_keyboard.c: 751: void USBHIDCBSetIdleRateHandler(uint8_t reportID, uint8_t newIdleRate)
+[v _USBHIDCBSetIdleRateHandler `(v ~T0 @X0 1 ef2`uc`uc ]
+"752
+[; ;device_keyboard.c: 752: {
+{
+[e :U _USBHIDCBSetIdleRateHandler ]
+"751
+[; ;device_keyboard.c: 751: void USBHIDCBSetIdleRateHandler(uint8_t reportID, uint8_t newIdleRate)
+[v _reportID `uc ~T0 @X0 1 r1 ]
+[v _newIdleRate `uc ~T0 @X0 1 r2 ]
+"752
+[; ;device_keyboard.c: 752: {
+[f ]
+"756
+[; ;device_keyboard.c: 756:     if(reportID == 0)
+[e $ ! == -> _reportID `i -> 0 `i 803  ]
+"757
+[; ;device_keyboard.c: 757:     {
+{
+"758
+[; ;device_keyboard.c: 758:         keyboardIdleRate = newIdleRate;
+[e = _keyboardIdleRate -> _newIdleRate `i ]
+"759
+[; ;device_keyboard.c: 759:     }
+}
+[e :U 803 ]
+"760
+[; ;device_keyboard.c: 760: }
+[e :UE 802 ]
+}

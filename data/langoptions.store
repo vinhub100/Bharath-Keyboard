@@ -1,0 +1,40 @@
+{
+    "langoptions": {
+        "Kannada": {
+            "icon": "../data/kannada.png",
+            "keymap": "vitanive_vndr/in kannada"
+        },
+        "Telugu": {
+            "icon": "../data/telugu.png",
+            "keymap": "vitanive_vndr/in telugu"
+        },
+        "Malayalam": {
+            "icon": "../data/malayalam.png",
+            "keymap": "vitanive_vndr/in malayalam"
+        },
+        "Tamil": {
+            "icon": "../data/tamil.png",
+            "keymap": "vitanive_vndr/in tamil"
+        },
+        "Bengali": {
+            "icon": "../data/bengali.png",
+            "keymap": "vitanive_vndr/in bengali"
+        },
+        "Odia": {
+            "icon": "../data/odia.png",
+            "keymap": "vitanive_vndr/in odia"
+        },
+        "Gujarati": {
+            "icon": "../data/gujarati.png",
+            "keymap": "vitanive_vndr/in gujarati"
+        },
+        "Punjabi": {
+            "icon": "../data/punjabi.png",
+            "keymap": "vitanive_vndr/in punjabi"
+        },
+        "Devanagari": {
+            "icon": "../data/devanagari.png",
+            "keymap": "vitanive_vndr/in devanagari"
+        }
+    }
+}

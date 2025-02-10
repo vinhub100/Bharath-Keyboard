@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=VitaniveKB Settings
+Comment=VitaniveKB Settings
+Exec=/opt/VitaniveKB/bin/ConfigApp.sh
+Icon=/opt/VitaniveKB/data/gear.png
+Terminal=false
+Type=Application
+Keywords=Settings;
+

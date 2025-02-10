@@ -1,0 +1,601 @@
+default xkb_symbols "qwerty" {  // "pc98"
+
+    name[Group1]= "QWERTY";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  q,	Q 		]	};
+    key <AD02> {	[	  w,	W		]	};
+    key <AD03> {	[	  e,	E		]	};
+    key <AD04> {	[	  r,	R		]	};
+    key <AD05> {	[	  t,	T		]	};
+    key <AD06> {	[	  y,	Y		]	};
+    key <AD07> {	[	  u,	U		]	};
+    key <AD08> {	[	  i,	I		]	};
+    key <AD09> {	[	  o,	O		]	};
+    key <AD10> {	[	  p,	P		]	};
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  a,	A 		]	};
+    key <AC02> {	[	  s,	S		]	};
+    key <AC03> {	[	  d,	D		]	};
+    key <AC04> {	[	  f,	F		]	};
+    key <AC05> {	[	  g,	G		]	};
+    key <AC06> {	[	  h,	H		]	};
+    key <AC07> {	[	  j,	J		]	};
+    key <AC08> {	[	  k,	K		]	};
+    key <AC09> {	[	  l,	L		]	};
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  z,	Z 		]	};
+    key <AB02> {	[	  x,	X		]	};
+    key <AB03> {	[	  c,	C		]	};
+    key <AB04> {	[	  v,	V		]	};
+    key <AB05> {	[	  b,	B		]	};
+    key <AB06> {	[	  n,	N		]	};
+    key <AB07> {	[	  m,	M		]	};
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+   
+};
+
+
+xkb_symbols "kannada" {
+
+    name[Group1]= "Kannada";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0C98,	NoSymbol,	U0C85,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0C9A,	NoSymbol,	U0CBE,		U0C86		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U0C9B,	NoSymbol,	U0CBF,		U0C87		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0C9C,	NoSymbol,	U0CC0,		U0C88		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U0C9D,	NoSymbol,	U0CC1,		U0C89		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0C9F,	NoSymbol,	U0CC2,		U0C8A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0CA0,	NoSymbol,	U0CC3,		U0C8B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0CA1,	NoSymbol,	U0CC6,		U0C8E		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0CA2,	NoSymbol,	U0CC7,		U0C8F		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0CA3,	NoSymbol,	U0CC8,		U0C90		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0CA8,	NoSymbol,	U0CCA,		U0C92 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0CAA,	NoSymbol,	U0CCB,		U0C93		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U0CAB,	NoSymbol,	U0CCC,		U0C94		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U0CAC,	NoSymbol,	U0C95,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U0CAD,	NoSymbol,	U0C96,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0CAE,	NoSymbol,	U0C97,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0C82,	NoSymbol,	U0CCD,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0C83,	NoSymbol,	U0CA4,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  U0CBC,	NoSymbol,	U0CA5,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0CB2,	NoSymbol,	U0CA6,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0CB5,	NoSymbol,	U0CA7,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0CB6,	NoSymbol,	U0C9E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0CB7,	NoSymbol,	U0C99,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0CB8,	NoSymbol,	U0CAF,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0CB9,	NoSymbol,	U0CB0,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0CB3,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "telugu" {
+
+    name[Group1]= "Telugu";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0C18,	NoSymbol,	U0C05,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0C1A,	NoSymbol,	U0C3E,		U0C06		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U0C1B,	NoSymbol,	U0C3F,		U0C07		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0C1C,	NoSymbol,	U0C40,		U0C08		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U0C1D,	NoSymbol,	U0C41,		U0C09		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0C1F,	NoSymbol,	U0C42,		U0C0A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0C20,	NoSymbol,	U0C43,		U0C0B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0C21,	NoSymbol,	U0C46,		U0C0E		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0C22,	NoSymbol,	U0C47,		U0C0F		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0C23,	NoSymbol,	U0C48,		U0C10		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0C28,	NoSymbol,	U0C4A,		U0C12 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0C2A,	NoSymbol,	U0C4B,		U0C13		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U0C2B,	NoSymbol,	U0C4C,		U0C14		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U0C2C,	NoSymbol,	U0C15,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U0C2D,	NoSymbol,	U0C16,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0C2E,	NoSymbol,	U0C17,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0C02,	NoSymbol,	U0C4D,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0C03,	NoSymbol,	U0C24,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  NoSymbol,	NoSymbol,	U0C25,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0C32,	NoSymbol,	U0C26,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0C35,	NoSymbol,	U0C27,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0C36,	NoSymbol,	U0C1E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0C37,	NoSymbol,	U0C19,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0C38,	NoSymbol,	U0C2F,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0C39,	NoSymbol,	U0C30,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0C33,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "malayalam" {
+
+    name[Group1]= "Malayalam";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0D18,	NoSymbol,	U0D05,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0D1A,	NoSymbol,	U0D3E,		U0D06		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U0D1B,	NoSymbol,	U0D3F,		U0D07		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0D1C,	NoSymbol,	U0D40,		U0D08		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U0D1D,	NoSymbol,	U0D41,		U0D09		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0D1F,	NoSymbol,	U0D42,		U0D0A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0D20,	NoSymbol,	U0D43,		U0D0B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0D21,	NoSymbol,	U0D46,		U0D0E		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0D22,	NoSymbol,	U0D47,		U0D0F		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0D23,	NoSymbol,	U0D48,		U0D10		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0D28,	NoSymbol,	U0D4A,		U0D12 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0D2A,	NoSymbol,	U0D4B,		U0D13		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U0D2B,	NoSymbol,	U0D4C,		U0D14		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U0D2C,	NoSymbol,	U0D15,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U0D2D,	NoSymbol,	U0D16,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0D2E,	NoSymbol,	U0D17,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0D02,	NoSymbol,	U0D4D,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0D03,	NoSymbol,	U0D24,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  NoSymbol,	NoSymbol,	U0D25,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0D32,	NoSymbol,	U0D26,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0D35,	NoSymbol,	U0D27,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0D36,	NoSymbol,	U0D1E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0D37,	NoSymbol,	U0D19,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0D38,	NoSymbol,	U0D2F,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0D39,	NoSymbol,	U0D30,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0D34,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "tamil" {
+
+    name[Group1]= "Tamil";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  NoSymbol,	NoSymbol,	U0B85,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0B9A,	NoSymbol,	U0BBE,		U0B86		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  NoSymbol,	NoSymbol,	U0BBF,		U0B87		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0B9C,	NoSymbol,	U0BC0,		U0B88		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  NoSymbol,	NoSymbol,	U0BC1,		U0B89		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0B9F,	NoSymbol,	U0BC2,		U0B8A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  NoSymbol,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  NoSymbol,	NoSymbol,	U0BC6,		U0B8E		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  NoSymbol,	NoSymbol,	U0BC7,		U0B8F		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0BA3,	NoSymbol,	U0BC8,		U0B90		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0BA8,	NoSymbol,	U0BCA,		U0B92 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0BAA,	NoSymbol,	U0BCB,		U0B93		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  NoSymbol,	NoSymbol,	U0BCC,		U0B94		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  NoSymbol,	NoSymbol,	U0B95,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  NoSymbol,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0BAE,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0B82,	NoSymbol,	U0BCD,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0B83,	NoSymbol,	U0BA4,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  NoSymbol,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0BB2,	NoSymbol,	NoSymbol,	NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0BB5,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0BB6,	NoSymbol,	U0B9E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0BB7,	NoSymbol,	U0B99,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0BB8,	NoSymbol,	U0BAF,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0BB9,	NoSymbol,	U0BB0,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0BB4,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "bengali" {
+
+    name[Group1]= "Bengali";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0998,	NoSymbol,	U0985,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U099A,	NoSymbol,	U09BE,		U0986		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U099B,	NoSymbol,	U09BF,		U0987		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U099C,	NoSymbol,	U09C0,		U0988		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U099D,	NoSymbol,	U09C1,		U0989		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U099F,	NoSymbol,	U09C2,		U098A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U09A0,	NoSymbol,	U09C3,		U098B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U09A1,	NoSymbol,	U09C7,		U098F		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U09A2,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U09A3,	NoSymbol,	U09C8,		U0990		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U09A8,	NoSymbol,	U09CB,		U0993 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U09AA,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U09AB,	NoSymbol,	U09CC,		U0994		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U09AC,	NoSymbol,	U0995,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U09AD,	NoSymbol,	U0996,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U09AE,	NoSymbol,	U0997,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0982,	NoSymbol,	U09CD,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0983,	NoSymbol,	U09A4,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  U09BC,	NoSymbol,	U09A5,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U09B2,	NoSymbol,	U09A6,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  NoSymbol,	NoSymbol,	U09A7,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U09B6,	NoSymbol,	U099E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U09B7,	NoSymbol,	U0999,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U09B8,	NoSymbol,	U09AF,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U09B9,	NoSymbol,	U09B0,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  NoSymbol,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "odia" {
+
+    name[Group1]= "Odia";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0B18,	NoSymbol,	U0B05,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0B1A,	NoSymbol,	U0B3E,		U0B06		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U0B1B,	NoSymbol,	U0B3F,		U0B07		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0B1C,	NoSymbol,	U0B40,		U0B08		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U0B1D,	NoSymbol,	U0B41,		U0B09		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0B1F,	NoSymbol,	U0B42,		U0B0A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0B20,	NoSymbol,	U0B43,		U0B0B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0B21,	NoSymbol,	U0B47,		U0B0F		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0B22,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0B23,	NoSymbol,	U0B48,		U0B10		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0B28,	NoSymbol,	U0B4B,		U0B13 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0B2A,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U0B2B,	NoSymbol,	U0B4C,		U0B14		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U0B2C,	NoSymbol,	U0B15,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U0B2D,	NoSymbol,	U0B16,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0B2E,	NoSymbol,	U0B17,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0B02,	NoSymbol,	U0B4D,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0B03,	NoSymbol,	U0B24,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  U0B3C,	NoSymbol,	U0B25,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0B32,	NoSymbol,	U0B26,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0B35,	NoSymbol,	U0B27,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0B36,	NoSymbol,	U0B1E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0B37,	NoSymbol,	U0B19,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0B38,	NoSymbol,	U0B2F,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0B39,	NoSymbol,	U0B30,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0B33,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "gujarati" {
+
+    name[Group1]= "Gujarati";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0A98,	NoSymbol,	U0A85,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0A9A,	NoSymbol,	U0ABE,		U0A86		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U0A9B,	NoSymbol,	U0ABF,		U0A87		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0A9C,	NoSymbol,	U0AC0,		U0A88		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U0A9D,	NoSymbol,	U0AC1,		U0A89		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0A9F,	NoSymbol,	U0AC2,		U0A8A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0AA0,	NoSymbol,	U0AC3,		U0A8B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0AA1,	NoSymbol,	U0AC7,		U0A8F		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0AA2,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0AA3,	NoSymbol,	U0AC8,		U0A90		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0AA8,	NoSymbol,	U0ACB,		U0A93 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0AAA,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U0AAB,	NoSymbol,	U0ACC,		U0A94		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U0AAC,	NoSymbol,	U0A95,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U0AAD,	NoSymbol,	U0A96,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0AAE,	NoSymbol,	U0A97,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0A82,	NoSymbol,	U0ACD,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0A83,	NoSymbol,	U0AA4,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  U0ABC,	NoSymbol,	U0AA5,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0AB2,	NoSymbol,	U0AA6,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0AB5,	NoSymbol,	U0AA7,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0AB6,	NoSymbol,	U0A9E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0AB7,	NoSymbol,	U0A99,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0AB8,	NoSymbol,	U0AAF,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0AB9,	NoSymbol,	U0AB0,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0AB3,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "punjabi" {
+
+    name[Group1]= "Punjabi";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0A18,	NoSymbol,	U0A05,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U0A1A,	NoSymbol,	U0A3E,		U0A06		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U0A1B,	NoSymbol,	U0A3F,		U0A07		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U0A1C,	NoSymbol,	U0A40,		U0A08		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U0A1D,	NoSymbol,	U0A41,		U0A09		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U0A1F,	NoSymbol,	U0A42,		U0A0A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0A20,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0A21,	NoSymbol,	U0A47,		U0A0F		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0A22,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0A23,	NoSymbol,	U0A48,		U0A10		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0A28,	NoSymbol,	NoSymbol,	NoSymbol 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U0A2A,	NoSymbol,	U0A4B,		U0A13		]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U0A2B,	NoSymbol,	U0A4C,		U0A14		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U0A2C,	NoSymbol,	U0A15,		NoSymbol		]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U0A2D,	NoSymbol,	U0A16,		NoSymbol		]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U0A2E,	NoSymbol,	U0A17,		NoSymbol		]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0A02,	NoSymbol,	U0A4D,		NoSymbol		]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0A03,	NoSymbol,	U0A24,		NoSymbol		]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  U0A3C,	NoSymbol,	U0A25,		NoSymbol		]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0A32,	NoSymbol,	U0A26,		NoSymbol 		]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0A35,	NoSymbol,	U0A27,		NoSymbol		]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0A36,	NoSymbol,	U0A1E,		NoSymbol		]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  NoSymbol,	NoSymbol,	U0A19,		NoSymbol		]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0A38,	NoSymbol,	U0A2F,		NoSymbol		]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0A39,	NoSymbol,	U0A30,		NoSymbol		]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0A33,	NoSymbol,	NoSymbol,	NoSymbol		]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+xkb_symbols "devanagari" {
+
+    name[Group1]= "Devanagari";
+
+    key <TLDE> {	[     grave,	asciitilde	]	};
+    key <AE01> {	[	  1,	exclam 		]	};
+    key <AE02> {	[	  2,	at		]	};
+    key <AE03> {	[	  3,	numbersign	]	};
+    key <AE04> {	[	  4,	dollar		]	};
+    key <AE05> {	[	  5,	percent		]	};
+    key <AE06> {	[	  6,	asciicircum	]	};
+    key <AE07> {	[	  7,	ampersand	]	};
+    key <AE08> {	[	  8,	asterisk	]	};
+    key <AE09> {	[	  9,	parenleft	]	};
+    key <AE10> {	[	  0,	parenright	]	};
+    key <AE11> {	[     minus,	underscore	]	};
+    key <AE12> {	[     equal,	plus		]	};
+
+    key <AD01> {	[	  U0918,	NoSymbol,	U0905,		NoSymbol		]	}; // Q ಘ 0C98  ಅ  0C85 
+    key <AD02> {	[	  U091A,	NoSymbol,	U093E,		U0906		]	}; // W ಚ 0C9A
+    key <AD03> {	[	  U091B,	NoSymbol,	U093F,		U0907		]	}; // E ಛ 0C9B
+    key <AD04> {	[	  U091C,	NoSymbol,	U0940,		U0908		]	}; // R ಜ 0C9C
+    key <AD05> {	[	  U091D,	NoSymbol,	U0941,		U0909		]	}; // T ಝ 0C9D
+    key <AD06> {	[	  U091F,	NoSymbol,	U0942,		U090A		]	}; // Y ಟ 0C9F
+    key <AD07> {	[	  U0920,	NoSymbol,	U0943,		U090B		]	}; // U ಠ 0CA0
+    key <AD08> {	[	  U0921,	NoSymbol,	U0947,		U090F		]	}; // I ಡ 0CA1
+    key <AD09> {	[	  U0922,	NoSymbol,	NoSymbol,	NoSymbol	]	}; // O ಢ 0CA2
+    key <AD10> {	[	  U0923,	NoSymbol,	U0948,		U0910		]	}; // P ಣ 0CA3
+    key <AD11> {	[ bracketleft,	braceleft	]	};
+    key <AD12> {	[ bracketright,	braceright	]	};
+
+    key <AC01> {	[	  U0928,	NoSymbol,	U094B,		U0913 		]	}; // A ನ 0CA8
+    key <AC02> {	[	  U092A,	NoSymbol,	NoSymbol,	NoSymbol	]	}; // S ಪ 0CAA  
+    key <AC03> {	[	  U092B,	NoSymbol,	U094C,		U0914		]	}; // D ಫ 0CAB  ಔ 0CCC 0C94
+    key <AC04> {	[	  U092C,	NoSymbol,	U0915,		NoSymbol	]	}; // F ಬ 0CAC  ಕ  0C95
+    key <AC05> {	[	  U092D,	NoSymbol,	U0916,		NoSymbol	]	}; // G ಭ 0CAD  
+    key <AC06> {	[	  U092E,	NoSymbol,	U0917,		NoSymbol	]	}; // H ಮ 0CAE  ಗ  0C97
+    key <AC07> {	[	  U0902,	NoSymbol,	U094D,		NoSymbol	]	}; // J ಂ  0C82   ್  0CCD
+    key <AC08> {	[	  U0903,	NoSymbol,	U0924,		NoSymbol	]	}; // K ಃ  0C83  ತ  0CA4
+    key <AC09> {	[	  U093C,	NoSymbol,	U0925,		NoSymbol	]	}; // L ೲ ಼  0CBC  
+    key <AC10> {	[ semicolon,	colon		]	};
+    key <AC11> {	[ apostrophe,	quotedbl	]	};
+
+    key <AB01> {	[	  U0932,	NoSymbol,	U0926,		NoSymbol 	]	}; // Z ಲ 0CB2  
+    key <AB02> {	[	  U0935,	NoSymbol,	U0927,		NoSymbol	]	}; // X ವ 0CB5  ಧ  0CA7
+    key <AB03> {	[	  U0936,	NoSymbol,	U091E,		NoSymbol	]	}; // C ಶ 0CB6 ಞ  0C9E
+    key <AB04> {	[	  U0937,	NoSymbol,	U0919,		NoSymbol	]	}; // V ಷ 0CB7 
+    key <AB05> {	[	  U0938,	NoSymbol,	U092F,		NoSymbol	]	}; // B ಸ 0CB8  
+    key <AB06> {	[	  U0939,	NoSymbol,	U0930,		NoSymbol	]	}; // N ಹ 0CB9 
+    key <AB07> {	[	  U0933,	NoSymbol,	NoSymbol,	NoSymbol	]	}; // M ಳ 0CB3 ರ  0CB0
+    key <AB08> {	[     comma,	less		]	};
+    key <AB09> {	[    period,	greater		]	};
+    key <AB10> {	[     slash,	question	]	};
+
+    key <BKSL> {	[ backslash,         bar	]	};
+    
+    include "level3(ralt_switch)"
+        
+};
+
+
+

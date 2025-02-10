@@ -1,0 +1,11 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+        "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node name="/in/kanet/kb/qc">
+        <interface name="in.kanet.kb.QC">
+                <method name="toggleQCView"/>
+                <method name="toggleLang"/>
+                <method name="nKeyAction">
+                    <arg name="nKey" type="s" direction="in"/>
+                </method>
+        </interface>
+</node>
